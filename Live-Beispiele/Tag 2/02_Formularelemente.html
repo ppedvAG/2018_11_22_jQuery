@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularelemente</title>
+    <style>
+        .inp-lbl-container{
+            margin-bottom: 10px;
+        }
+
+        .my-lbl{
+            display: inline-block;
+            width: 100px;
+            /* background-color: aqua; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+        <div class="inp-lbl-container">
+            <label for="first-name" class="my-lbl">Vorname:</label>
+            <input type="text" id="first-name" class="my-inp" name="first-name" placeholder="Max">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="last-name" class="my-lbl">Nachname:</label>
+            <input type="text" id="last-name" class="my-inp" name="last-name" placeholder="Mustermann">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="pw" class="my-lbl">Passwort:</label>
+            <input type="password" id="pw" class="my-inp" name="pw">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="email" class="my-lbl">E-Mail:</label>
+            <input type="email" id="email" class="my-inp" name="email">
+        </div>
+        <!-- 
+            <div class="inp-lbl-container">
+            <label for="date" class="my-lbl">Datum:</label>
+            <input type="date" id="date" class="my-inp" name="date">
+            </div> 
+        -->
+        <div class="inp-lbl-container">
+            <label for="homepage" class="my-lbl">Homepage:</label>
+            <input type="url" id="homepage" class="my-inp" name="homepage" title="Bitte geben Sie https:// ein!" value="https://">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="age" class="my-lbl">Alter:</label>
+            <input type="number" id="age" class="my-inp" name="age" min="1" max="120">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="fav-color" class="my-lbl">Lieblingsfarbe:</label>
+            <input type="color" id="fav-color" class="my-inp" name="fav-color">
+        </div>
+        <div class="inp-lbl-container">
+            <label for="range" class="my-lbl">Range:</label>
+            <input type="range" id="range" class="my-inp" name="range" min="0" max="300" step="10" title="0">
+        </div>
+
+        <fieldset>
+            <legend>Pizzas</legend>
+            <div class="inp-lbl-container">
+                <input type="radio" name="pizzas" checked>
+                <label class="my-lbl">Margherita</label></div>
+            <div class="inp-lbl-container">
+                <input type="radio" name="pizzas">
+                <label class="my-lbl">Tonno</label>
+            </div>
+            <div class="inp-lbl-container">
+                <input type="radio" name="pizzas">
+                <label class="my-lbl">Della Casa</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="inp-lbl-container">
+                <input type="checkbox" name="extras">
+                <label class="my-lbl">Käse</label></div>
+            <div class="inp-lbl-container">
+                <input type="checkbox" name="extras">
+                <label class="my-lbl">Mais</label>
+            </div>
+            <div class="inp-lbl-container">
+                <input type="checkbox" name="extras">
+                <label class="my-lbl">Paprika</label>
+            </div>
+        </fieldset>
+
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Bitte teilen Sie uns Ihre Meinung mit..."></textarea>
+
+        <select name="" id="">
+            <option value="">Margherita</option>
+            <option value="">Tonno</option>
+            <option value="">Della Casa</option>
+            <option value="">Salmi</option>
+        </select>
+
+        <div class="inp-lbl-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset" value="Alles zurücksetzen">
+        </div>
+        <!-- <button>Senden</button> -->
+    </form>
+
+
+    <!-- <p>
+        <abbr title="World Health Organisation">WHO</abbr>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sed.
+    </p> -->
+
+
+    <script>
+
+        /* function test() {
+            var inp = document.getElementById('first-name').value;
+            console.log('Vorname:' + inp);
+        } */
+
+         /* 
+         $('#nameOfInput').change(function(){
+             var text = $(this).val();
+
+         }); 
+         */
+
+
+   
+
+    </script>
+</body>
+
+</html>

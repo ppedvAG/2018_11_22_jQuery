@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slide</title>
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <style>
+        div {
+            border: 2px solid midnightblue;
+            height: 150px;
+            line-height: 50px;
+            font-size: 1.5em;
+            text-align: center;
+            width: 300px;
+        }
+
+        #question {
+            background-color: midnightblue;
+            color: whitesmoke;
+        }
+
+        #question:hover {
+            cursor: pointer;
+        }
+
+        #answer {
+            display: none;
+        }
+
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="question">Frage</div>
+    <div id="answer">Antwort</div>
+    <button id="btn-stop">Stop</button>
+    <button id="btn-finish">Finish</button>
+
+    <script>
+        $(function(){
+
+            $('#question').click(function(){
+                $('#answer').slideToggle(5000, function(){
+                    alert('Fertig! :)');
+                });
+            });
+
+            $('#btn-stop').click(function(){
+                $('#answer').stop();
+            });
+
+            $('#btn-finish').click(function(){
+                $('#answer').finish();
+            });
+
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

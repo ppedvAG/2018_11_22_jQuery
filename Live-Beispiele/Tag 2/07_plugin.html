@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <title>Plugin</title>
+</head>
+<body>
+
+    <div id="demo01">Div01</div>
+    <div id="demo02">Div02</div>
+    <div id="demo03">Div03</div>
+    <div id="demo04">Div04</div>
+    <button id="btn-ok">OK</button>
+    
+
+    <script>
+        
+        $(document).ready(function(){
+    
+            $.fn.makeBorder = function(){
+
+                this.css({
+                    border: '2px solid green',
+                    width: '200px'
+                });
+
+                return this;
+
+            }
+
+
+            $('#btn-ok').click(function(){
+                $('#demo02').makeBorder().addClass('hasBorder');
+            });
+
+            
+
+
+        });
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Universalselektor */
+/* 
+*{
+    margin: 0;
+    padding: 0;
+} 
+*/
+body{
+    margin: 0;
+    /* 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px; */
+}
+
+/* Typselektoren */
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Klassenselektoren */
+.my-class{
+    color: red;
+}
+
+/* ID-Selektor */
+#container{
+    border: 2px solid green;
+    padding: 20px;
+}
+
+/* Attributselektoren */
+a[target]{
+    font-style: italic;
+}
+
+/* exakt dieser Wert muss zugeordnet sein */
+a[target="_blank"]{
+
+}
+
+/* Wert muss mit bestimmter Zeichenfolge BEGINNEN */
+p[class^="my"]{
+    text-decoration: underline;
+}
+
+/* Wert muss mit bestimmter Zeichenfolge ENDEN */
+p[class$="class"]{
+
+}
+
+/* Wert muss aus einem bestimmten Wort bestehen */
+p[class~="great"]{
+
+}
+
+/* Wert muss bestimmte Zeichenfolge irgendwo ENTHALTEN */
+p[class*="eat"]{
+    color: blue;
+}
+
+
+/*
+ th, td{
+    border: 1px solid black;
+} 
+*/
+
+/* Kombinatoren */
+
+/* Nachfahren-Kombinator (descendant selector) */
+div span{
+    background-color: chartreuse;
+}
+
+/* Kind-Kombinator (child selector) */
+#container>span{
+    font-weight: bold;
+}
+
+/* Benachbarte Geschwister-Kombinatoren (adjacent sibling selector) */
+h1+p{
+    font-size: 32px;
+}
+
+/* Allgemeiner Geschwister-Kombinator */
+h1~p{
+    color: forestgreen;
+}
+
+/* Pseudoklassen */
+a:hover{
+    background-color: chartreuse;
+}
+
+input:checked{
+
+}
+
+input:disabled{
+
+}
+
+/* Pseudoelemente */
+.my-great-class::first-letter{
+    font-family: Parchment;
+    font-size: 42px;
+}
+
+.my-great-class::after{
+    content: "";
+    display: block;
+    border-bottom: 4px solid green;
+}
+.my-great-class::before{}

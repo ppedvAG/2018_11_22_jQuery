@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Blur</title>
+</head>
+<body>
+    <input type="text" id="myInput" pattern="[a-zA-Z \+]{3,}" required>
+    <script>
+        $(function(){
+            $('#myInput').blur(function(){
+                var inp = $(this);
+
+                /* 
+                JavaScript-Variante:
+                var inp = document.getElementById('myInput');
+                if(inp.checkValidity()) */
+
+                /* jQuery-Validity-check: */
+                if(inp[0].validity.valid){
+                    $(this).css('background-color', 'green');
+                }
+                else{
+                    $(this).css('background-color', 'firebrick');
+                }
+
+                /* Rahmenfarbe verändern. Beachte: Input-Felder haben per Default einen
+                    border-style 'inset'! */
+                /* if(inp[0].validity.valid){
+                    $(this).css({
+                        borderStyle: 'solid',
+                        borderColor: 'green'
+                    });
+                }
+                else{
+                    $(this).css({
+                        borderStyle: 'solid',
+                        borderColor: 'firebrick'
+                    });
+                } */
+            });
+        });
+    </script>
+</body>
+</html>

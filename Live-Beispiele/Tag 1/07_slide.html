@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slide</title>
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <style>
+        div{
+            border: 2px solid midnightblue;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.5em;
+            text-align: center;
+            width: 300px;
+        }
+
+        .question{
+            background-color: midnightblue;
+            color: whitesmoke;
+        }
+
+        .question:hover{
+            cursor: pointer;
+        }
+
+        .answer{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="question">Frage</div>
+    <div class="answer">Antwort</div>
+
+
+
+
+    <script>
+    
+        $(document).ready(function(){
+
+
+            $('.question').click(function(){
+                $(this).next().slideDown();
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-Basics</title>
+    <!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="01_jQuery-Basics.css">
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <script src="01_jQuery-Basics.js"></script>
+    <style>
+        #demo{
+            height: 200px;
+            width: 200px;
+            border: 2px solid green;
+
+           /*  border-width: 2px;
+            border-style: solid;
+            border-color: green; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo"></div>
+    <button id="btn-ok" >OK</button>
+
+    <script>
+
+        /* $ steht für jQuery */
+
+        /*
+        
+        Grundsyntax:
+
+        $(selector).action();
+        jQuery(selector).action();
+
+
+        document.getElementById('my-id');
+        document.getElementsByTagName('p');
+        document.getElementsByClassName('my-class');
+
+        $('p')
+        $('.my-class')
+        $('#my-id')
+        $('a[target="_blank"]')
+        $('#container>span')
+        $('p:nth-child(3)')
+        $('p:nth-child(3n + 2)')
+        $('tr:nth-child(even)')
+        $('.my-great-class::first-letter')
+        
+        */
+
+/* function makeBlue(){
+       document.getElementById('demo').style.backgroundColor = "blue";
+}
+
+document.getElementById('btn-ok').addEventListener('click', makeBlue); */
+
+
+        /* 
+        Kurzschreibweise für $(document).ready(function(){});
+        $(function(){}); 
+        */
+
+       $(document).ready(function(){
+
+           /* $('#demo').css('background-color', 'red'); */
+
+            $('#btn-ok').click(function(){
+                $('#demo').css('background-color', 'rgb(255, 0, 0)');
+            });
+
+
+
+
+
+
+       });
+
+    </script>
+</body>
+
+</html>

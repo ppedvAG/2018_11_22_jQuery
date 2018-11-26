@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+    <div id="demo05">
+        <!-- &lt;p&gt;&lt;/p&gt; -->
+    </div>
+
+
+
+
+
+
+    <script>
+    
+        $(document).ready(function(){
+
+            /* $('#demo01').click(function(){
+                $(this).hide();
+            }); */
+
+            $('#demo01').click(function(){
+                $(this).css('background-color', 'red');
+            });
+
+            $('#demo01').dblclick(function(){
+                $(this).css('background-color', 'blue');
+            });
+
+            $('#demo02').mouseenter(function(){
+                $(this).css('background-color', 'blue');
+            });
+
+            $('#demo02').mouseleave(function(){
+                $(this).css('background-color', 'initial');
+            });
+
+            /* 
+            .blur()
+            .focus()
+            .change()
+            .keydown()
+            .keypress()
+            .keyup()
+
+            .resize()
+            .scroll()
+            .submit()
+            */
+
+            /* $('#demo05').html('<p>Neuer Text!</p>'); */
+            /* $('#demo05').text('<p>Neuer Text!</p>'); */
+
+
+
+
+
+
+
+        });
+
+/* console.log(document.getElementById('demo05').innerHTML); */
+
+/* document.getElementById('demo05').innerHTML = "<p>Testtext</p>"; */
+    
+    </script>
+</body>
+</html>

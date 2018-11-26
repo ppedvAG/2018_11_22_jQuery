@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <title>filter</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <p>Das ist Paragraph Nr. 1</p>
+    <p class="test">Das ist Paragraph Nr. 2</p>
+    <p class="test">Das ist Paragraph Nr. 3</p>
+    <p>Das ist Paragraph Nr. 4</p>
+
+
+    <input type="search" id="my-search">
+    <ul id="cities">
+        <li>Aachen</li>
+        <li>Berlin</li>
+        <li>Coburg</li>
+        <li>Dresden</li>
+        <li>Essen</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+
+            /* document.getElementsByTagName('p'); */
+
+            $('p').filter('.test').css('color', 'red');
+
+
+
+            /* 
+            Testtext
+            01234567
+
+            > -1 
+            */
+
+            /* Suchfeld: */
+            /* $('#my-search').keyup(function(){}); */
+
+            $('#my-search').on('keyup', function(){
+                var inpVal = $(this).val().toLowerCase();
+
+                $('#cities>li').filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(inpVal) > -1);
+                });
+        
+            });
+
+
+
+
+        });
+    </script>
+    
+</body>
+</html>

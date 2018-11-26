@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <title>Animations</title>
+    <style>
+        #demo{
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            border: 2px solid darkcyan;
+            position: relative;
+            top: 500px;
+            /* opacity: 0; */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+        <button id="btn-ok">OK</button>
+        <div id="demo"></div>
+
+    <script>
+    
+    $(function(){
+
+        /* $('#demo').animate({}, 5000).animate({}).animate({}); */
+
+        $('#btn-ok').click(function(){
+            $('#demo').fadeIn(2000)
+            .animate({
+                width: '+=40px',
+                height: '150px',
+                top: '200px'
+                
+            }, 2000, 'linear')
+            .animate({
+                borderRadius: '40px'
+            });
+        });
+
+    });
+    
+    </script>
+</body>
+</html>
